@@ -3,107 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinland Saga Minecraft Server</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Icon/LogoOnlyPNG.png">
+    <title>Vinland Saga</title>
+    <link rel="stylesheet" href="stylesaga.css">
+    <link rel="icon" href="../Icon/LogoOnlyPNG.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img src="Icon/iconPNG.png" alt="Vinland Saga Logo" class="logo">
-    <h1>Welcome to Vinland Saga!</h1>
-    <p>Join our medieval, Viking, and fantasy-themed Minecraft server. Experience epic adventures, challenging quests, and a vibrant community.</p>
-    <div class="button-container">
-        <button class="button" onclick="copyIp()">Play Now</button>
-       
-         <button onclick="window.open('https://drive.google.com/file/d/1upxH1QdnP22dBpgE1lDhii8ba08Fmlgq/view?usp=sharing');" class="button">Download Modpack</button>
-    </div>
-    <div class="screenshot-container" onwheel="scrollHorizontally(event)">
-        <img src="images/1.png" alt="Screenshot 1" class="screenshot">
-        <img src="images/2.png" alt="Screenshot 2" class="screenshot">
-        <img src="images/2024-05-24_06.53.10.png" alt="Screenshot 3" class="screenshot">
-        <img src="images/2024-05-24_07.07.24.png" alt="Screenshot 4" class="screenshot">
-        <img src="images/2024-05-24_07.09.16.png" alt="Screenshot 5" class="screenshot">
-    </div>
-
-    <div class="text" style="color: white;">
-        <b>Welcome to Vinland Saga</b>
-        <p>
-            Step into a world where medieval, Viking, and fantasy themes converge to create an epic survival and roleplay experience. Our server offers a rich variety of gameplay options, including farming, treasure hunting, bounty hunts, boss fights, and home decoration. Engage in an economy system where trading items is essential, and build your own thriving colony with Mine Colonies.
-        </p>
+    <header>
+        <h1>WELCOME TO VINLAND SAGA</h1>
+    </header>
+    <main>
+        <div class="content-left">
+            <img src="/Icon/IconMain.png" alt="Vinland Saga Logo" class="logo">
+            <h2>Vinland Saga</h2>
+            <div class="button-container">
+                <button onclick="copyIp()">Play Now</button>
+                <button id="normal" onclick="window.open('https://drive.google.com/file/d/1v42l-RQFwitI5kpatN_6zFuxyG3zUUFg/view?usp=sharing');">Download Modpack</button>
+            </div>
+            <p class="description">
+                Step into a world where medieval, Viking, and fantasy themes converge to create an epic survival and roleplay experience. Our server offers a rich variety of gameplay options, including farming, treasure hunting, bounty hunts, boss fights, and home decoration. Engage in an economy system where trading items is essential, and build your own thriving colony with Mine Colonies.
+            </p>
+        </div>
+        <div class="content-right">
+            <h2>Screenshots</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="/images/sc2.png" alt="Screenshot 1">
+                </div>
+                <div class="card">
+                    <img src="/images/1.png" alt="Screenshot 2">
+                </div>
+                <div class="card">
+                    <img src="/images/2.png" alt="Screenshot 3">
+                </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
         
-        <ul>
-            <b>Key Feature:</b>
-            <li>
-            Plugins: EssentialsX, WorldEdit, mcMMO, and more to enhance your gameplay.
-            </li>
-
-            <li>
-                Custom Mechanics: Unique game mechanics tailored for an immersive experience.
-            </li>
-            
-            <li>
-                Structures & Landmarks: Explore a world filled with custom structures and landmarks.
-            </li>
-
-            <li>
-                Events & Quests: Participate in special quests and seasonal events.
-            </li>
-
-            <li>
-                Custom Items & Mobs: Discover custom items and battle unique mobs.
-            </li>
-        </ul>
-
-        <ul>
-            <b>Server Rules:</b>
-            <li>
-                No explosives in the village.
-            </li>
-
-            <li>
-                Engage in trading and avoid stealing.
-            </li>
-            
-            <li>
-                Use money to buy items.
-            </li>
-
-            <li>
-                Claim only licensed land.
-            </li>
-
-            <li>
-                Buy a license to trade.
-            </li>
-
-            <li>
-                Purchase land to build your house.
-            </li>
-
-            <li>
-                Assign jobs and roles within the community.
-            </li>
-
-            <li>
-                Follow additional rules to ensure a fun and fair environment.
-            </li>
-
-        </ul>
-    </div>
-
+    </main>
+    
+    <script src="../Code/alogo.js"></script>
     <script>
         function copyIp() {
-            const ip = "vinlandsagavv.aternos.me:36796";
+            const ip = "vinlandsagav.aternos.me:36796";
             navigator.clipboard.writeText(ip).then(() => {
                 alert("Server IP copied to clipboard!");
             });
         }
 
-        function scrollHorizontally(event) {
-            event.preventDefault();
-            const scrollSpeed = 50; // Adjust the scroll speed here (increase for faster scroll)
-            document.querySelector('.screenshot-container').scrollLeft += event.deltaY * scrollSpeed;
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add('loaded');
+        });
     </script>
-    
 </body>
 </html>
