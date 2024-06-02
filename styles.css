@@ -191,13 +191,13 @@ main {
 
 @keyframes changeBackground {
     0%, 100% {
-        background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url('/images/bg.png');
+        background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url('images/bg.png');
     }
     33% {
-        background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url('/images/bg1.png');
+        background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url('images/bg1.png');
     }
     66% {
-        background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url('/images/bg2.png');
+        background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url('images/bg2.png');
     }
     
 }
